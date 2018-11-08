@@ -15,6 +15,7 @@
 		823F5FA72194A87D0029463B /* Quake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F5FA62194A87D0029463B /* Quake.swift */; };
 		823F5FA92194AE350029463B /* QuakeFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F5FA82194AE350029463B /* QuakeFetcher.swift */; };
 		823F5FAB2194B10E0029463B /* CoordinateRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F5FAA2194B10E0029463B /* CoordinateRegion.swift */; };
+		823F5FAD2194BBC50029463B /* Quake+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F5FAC2194BBC50029463B /* Quake+Mapping.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		823F5FA62194A87D0029463B /* Quake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quake.swift; sourceTree = "<group>"; };
 		823F5FA82194AE350029463B /* QuakeFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeFetcher.swift; sourceTree = "<group>"; };
 		823F5FAA2194B10E0029463B /* CoordinateRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateRegion.swift; sourceTree = "<group>"; };
+		823F5FAC2194BBC50029463B /* Quake+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Quake+Mapping.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				823F5FA62194A87D0029463B /* Quake.swift */,
+				823F5FAC2194BBC50029463B /* Quake+Mapping.swift */,
 				823F5FA82194AE350029463B /* QuakeFetcher.swift */,
 				823F5FAA2194B10E0029463B /* CoordinateRegion.swift */,
 				823F5F952194A5F80029463B /* ViewController.swift */,
@@ -156,6 +159,7 @@
 				823F5FA92194AE350029463B /* QuakeFetcher.swift in Sources */,
 				823F5FA72194A87D0029463B /* Quake.swift in Sources */,
 				823F5FAB2194B10E0029463B /* CoordinateRegion.swift in Sources */,
+				823F5FAD2194BBC50029463B /* Quake+Mapping.swift in Sources */,
 				823F5F942194A5F80029463B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

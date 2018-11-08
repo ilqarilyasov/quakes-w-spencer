@@ -9,7 +9,7 @@
 import Foundation
 import CoreLocation
 
-struct Quake: Decodable {
+class Quake: NSObject, Decodable {
 
     struct Properties: Decodable {
         
@@ -19,10 +19,9 @@ struct Quake: Decodable {
             case time
         }
         
-        let magnitude: Double
+        let magnitude: Double?
         let place: String
         let time: Date
-        let geometry: Geometry
     }
 
     struct Geometry: Decodable {
@@ -43,6 +42,10 @@ struct Quake: Decodable {
         
         let location: CLLocationCoordinate2D
     }
+    
+    let geometry: Geometry
+    let properties: Properties
+    let id: String
 }
 
 struct QuakeResults: Decodable {
