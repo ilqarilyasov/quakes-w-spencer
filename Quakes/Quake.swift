@@ -13,6 +13,10 @@ class Quake: NSObject, Decodable {
 
     struct Properties: Decodable {
         
+        enum Alert: String, Decodable, Hashable {
+            case green, yellow, orange, red
+        }
+        
         enum PropertiesCodingKeys: String, CodingKey {
             case magnitude = "mag"
             case place
@@ -22,6 +26,7 @@ class Quake: NSObject, Decodable {
         let magnitude: Double?
         let place: String
         let time: Date
+        let alert: Alert?
     }
 
     struct Geometry: Decodable {

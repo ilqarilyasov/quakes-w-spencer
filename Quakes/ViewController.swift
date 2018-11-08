@@ -27,6 +27,12 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         annotationView.glyphTintColor = .white
         annotationView.glyphImage = UIImage(named: "QuakeIcon")
+        annotationView.canShowCallout = true
+        
+        let detailView = QuakeDetailView(frame: .zero)
+        detailView.quake = quake
+        
+        annotationView.detailCalloutAccessoryView = detailView
         
         return annotationView
     }

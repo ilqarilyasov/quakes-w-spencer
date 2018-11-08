@@ -16,6 +16,7 @@
 		823F5FA92194AE350029463B /* QuakeFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F5FA82194AE350029463B /* QuakeFetcher.swift */; };
 		823F5FAB2194B10E0029463B /* CoordinateRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F5FAA2194B10E0029463B /* CoordinateRegion.swift */; };
 		823F5FAD2194BBC50029463B /* Quake+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F5FAC2194BBC50029463B /* Quake+Mapping.swift */; };
+		823F5FAF2194D1290029463B /* QuakeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F5FAE2194D1290029463B /* QuakeDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		823F5FA82194AE350029463B /* QuakeFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeFetcher.swift; sourceTree = "<group>"; };
 		823F5FAA2194B10E0029463B /* CoordinateRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateRegion.swift; sourceTree = "<group>"; };
 		823F5FAC2194BBC50029463B /* Quake+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Quake+Mapping.swift"; sourceTree = "<group>"; };
+		823F5FAE2194D1290029463B /* QuakeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				823F5FAC2194BBC50029463B /* Quake+Mapping.swift */,
 				823F5FA82194AE350029463B /* QuakeFetcher.swift */,
 				823F5FAA2194B10E0029463B /* CoordinateRegion.swift */,
+				823F5FAE2194D1290029463B /* QuakeDetailView.swift */,
 				823F5F952194A5F80029463B /* ViewController.swift */,
 				823F5F972194A5F80029463B /* Main.storyboard */,
 				823F5FA52194A6590029463B /* Resources */,
@@ -155,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				823F5FAF2194D1290029463B /* QuakeDetailView.swift in Sources */,
 				823F5F962194A5F80029463B /* ViewController.swift in Sources */,
 				823F5FA92194AE350029463B /* QuakeFetcher.swift in Sources */,
 				823F5FA72194A87D0029463B /* Quake.swift in Sources */,
