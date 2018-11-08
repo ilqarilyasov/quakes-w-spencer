@@ -45,6 +45,6 @@ struct Quake: Decodable {
     }
 }
 
-struct Quakeresults: Decodable {
+struct QuakeResults: Decodable {
     let features: [Quake]
 }

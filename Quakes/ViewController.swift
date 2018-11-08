@@ -13,10 +13,26 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
-    @IBOutlet weak var mapKit: MKMapView!
+    private func fetchQuakes() {
+        
+        let visibleRegion = CoordinateRegion(mapRect: mapView.visibleMapRect)
+        
+        quakeFetcher.fetchQuakes(in: visibleRegion) { (quakes, error) in
+            if let error = error {
+                NSLog("Error fetching quakes: \(error.localizedDescription)")
+                return
+            }
+            
+            self.quakes = quakes ?? []
+        }
+    }
     
+    
+    private let quakeFetcher = QuakeFetcher()
+    private var quakes = [Quake]()
+    
+    @IBOutlet weak var mapView: MKMapView!
 }
 
