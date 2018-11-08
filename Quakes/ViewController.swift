@@ -8,15 +8,34 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class ViewController: UIViewController, MKMapViewDelegate {
+class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        locationManager.requestWhenInUseAuthorization()
+        
         mapView.delegate = self
         mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "QaukeAnnotationView")
         
+        userTrackingButton = MKUserTrackingButton(mapView: mapView)
+        userTrackingButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        mapView.addSubview(userTrackingButton)
+        
+        userTrackingButton.leftAnchor.constraint(equalTo: mapView.leftAnchor, constant: 20).isActive = true
+        userTrackingButton.bottomAnchor.constraint(equalTo: mapView.bottomAnchor, constant: -20).isActive = true
+        
+        fetchQuakes()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        
+    }
+    
+    func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
         fetchQuakes()
     }
     
@@ -55,11 +74,22 @@ class ViewController: UIViewController, MKMapViewDelegate {
     private let quakeFetcher = QuakeFetcher()
     private var quakes = [Quake]() {
         didSet {
+            let oldQuakes = Set(oldValue)
+            let newQuakes = Set(quakes)
+            
+            let addedQuakes = Array(newQuakes.subtracting(oldQuakes))
+            let removedQuakes = Array(oldQuakes.subtracting(newQuakes))
+            
             DispatchQueue.main.async {
-                self.mapView.addAnnotations(self.quakes)
+                
+                self.mapView.removeAnnotations(removedQuakes)
+                self.mapView.addAnnotations(addedQuakes)
             }
         }
     }
+    
+    let locationManager = CLLocationManager()
+    private var userTrackingButton: MKUserTrackingButton!
     
     @IBOutlet weak var mapView: MKMapView!
 }
