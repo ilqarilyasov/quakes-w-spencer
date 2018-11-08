@@ -12,6 +12,7 @@
 		823F5F992194A5F80029463B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 823F5F972194A5F80029463B /* Main.storyboard */; };
 		823F5F9B2194A5FA0029463B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 823F5F9A2194A5FA0029463B /* Assets.xcassets */; };
 		823F5F9E2194A5FA0029463B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 823F5F9C2194A5FA0029463B /* LaunchScreen.storyboard */; };
+		823F5FA72194A87D0029463B /* Quake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F5FA62194A87D0029463B /* Quake.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		823F5F9A2194A5FA0029463B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		823F5F9D2194A5FA0029463B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		823F5F9F2194A5FA0029463B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		823F5FA62194A87D0029463B /* Quake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quake.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,23 @@
 		823F5F922194A5F80029463B /* Quakes */ = {
 			isa = PBXGroup;
 			children = (
-				823F5F932194A5F80029463B /* AppDelegate.swift */,
+				823F5FA62194A87D0029463B /* Quake.swift */,
 				823F5F952194A5F80029463B /* ViewController.swift */,
 				823F5F972194A5F80029463B /* Main.storyboard */,
-				823F5F9A2194A5FA0029463B /* Assets.xcassets */,
-				823F5F9C2194A5FA0029463B /* LaunchScreen.storyboard */,
-				823F5F9F2194A5FA0029463B /* Info.plist */,
+				823F5FA52194A6590029463B /* Resources */,
 			);
 			path = Quakes;
+			sourceTree = "<group>";
+		};
+		823F5FA52194A6590029463B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				823F5F932194A5F80029463B /* AppDelegate.swift */,
+				823F5F9C2194A5FA0029463B /* LaunchScreen.storyboard */,
+				823F5F9A2194A5FA0029463B /* Assets.xcassets */,
+				823F5F9F2194A5FA0029463B /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				823F5F962194A5F80029463B /* ViewController.swift in Sources */,
+				823F5FA72194A87D0029463B /* Quake.swift in Sources */,
 				823F5F942194A5F80029463B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,7 +295,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Quakes/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Quakes/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +312,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Quakes/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Quakes/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
